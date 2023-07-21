@@ -1,148 +1,87 @@
 import Image from "next/image";
 
 import Logo from "../assets/anotai-logo.svg";
+import Hero from "../assets/note-hero.svg";
+import { Underscore } from "@/components/Underscore";
 
 export default function Home() {
   return (
-    <main
-      style={{
-        backgroundColor: "rgb(105,178,75)",
-        background:
-          "linear-gradient(0deg, rgba(105,178,75,1) 0%, rgba(21,75,174,1) 100%)",
-        height: "100vh",
-      }}
-    >
-      <div style={{ display: "flex", flexDirection: "row" }}>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            width: "50%",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
+    <main className="w-full h-full text-gray-900 flex flex-col md:flex-row">
+      <div className=" flex items-center flex-col p-4 text-center justify-center">
+        <h1 className="flex text-4xl items-center gap-1 font-bold mt-3 animate-[fadeIn_200ms_ease-in-out]">
+          <Image
+            className="w-9 h-9"
+            alt="Letra A representando logotipo da marca"
+            src={Logo}
+          />
+          <span>Anotai</span>
+        </h1>
+        <p className="text-xl mt-3 leading-8 animate-fadeIn">
+          Lorem ipsum dolor sit amet consectetur. <Underscore>liquet dui facilisis bibendum</Underscore> 
+          {" "}eget convallis tempus suspendisse lectus sodales. Sed odio id morbi
+          non. Massa aliquet imperdiet massa eget ac enim et accumsan. Neque
+          cursus augue ut a auctor in maecenas ipsum. Netus dui pretium aliquam
+          arcu egestas rutrum libero faucibus varius. Quam amet massa eu
+          elementum nunc.
+        </p>
+        <Image
+        className="object-contain p-4 animate-[fadeIn_400ms_ease-in-out]"
+         alt="Uma pessoa fazendo anotações"
+          src={Hero}
+        />
+      </div>
+      <div className="w-full h-full	bg-backgroundGradient flex items-center justify-center p-2 md:p-4">
+        <form
+          action="submit"
+          className="bg-gray-100 p-4 max-w-md flex flex-col items-center rounded-md gap-3 animate-[fadeIn_300ms_ease-in-out]"
         >
-          <Image src={Logo} alt="logo do sistema" style={{ width: "200px" }} />
-          <p
-            style={{
-              fontSize: "24px",
-              textAlign: "right",
-              marginLeft: "114px",
-              marginTop: "30px",
-            }}
+          <h4 className="text-2xl font-bold">CADASTRO</h4>
+          <div className="w-full flex flex-col gap-3 mt-3">
+            <label className="flex w-full flex-col gap-1">
+              <strong>Nome*</strong>
+              <input
+                type="text"
+                placeholder="Insira seu nome"
+                name=""
+                id=""
+                className="p-2 rounded-md"
+              />
+            </label>
+
+            <label className="flex w-full flex-col gap-1">
+              <strong>E-mail*</strong>
+              <input
+                type="email"
+                placeholder="Insira seu e-mail"
+                name=""
+                id=""
+                className="p-2 rounded-md"
+              />
+            </label>
+            <label className="flex w-full flex-col gap-1">
+              <strong>O que não pode faltar no seu app de estudos?</strong>
+              <textarea
+                placeholder="Nos de sua opinião"
+                className="p-2 rounded-md resize-none h-36"
+              />
+            </label>
+          </div>
+          <strong>
+            <span className="hover:cursor-pointer">Termos e condições</span>
+          </strong>
+          <div>
+            <label className="flex items-center gap-1">
+              <input type="checkbox" />
+              <span> Aceito os termos e condições</span>
+            </label>
+          </div>
+          <button
+            type="button"
+            className="bg-backgroundGradient hover:scale-105 transition-transform p-2 rounded-md font-bold text-white"
           >
-            Lorem ipsum dolor sit amet consectetur. Aliquet dui facilisis
-            bibendum eget convallis tempus suspendisse lectus sodales. Sed odio
-            id morbi non. Massa aliquet imperdiet massa eget ac enim et
-            accumsan. Neque cursus augue ut a auctor in maecenas ipsum. Netus
-            dui pretium aliquam arcu egestas rutrum libero faucibus varius. Quam
-            amet massa eu elementum nunc.
-          </p>
-        </div>
-        <div>
-          <form
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              width: "506px",
-              height: "704px",
-              borderRadius: "22px",
-              border: "2px solid #CCC",
-              marginLeft: "70px",
-              marginTop: "40px",
-              padding: "10px 25px",
-            }}
-          >
-            <h1
-              style={{
-                textAlign: "center",
-                fontSize: "48px",
-                fontWeight: "bold",
-
-                marginTop: "60px",
-              }}
-            >
-              Anotaí
-            </h1>
-            <label
-              style={{
-                fontSize: "20px",
-                lineHeight: "28px",
-                fontWeight: "bold",
-
-                marginBottom: "5px",
-              }}
-            >
-              Nome*
-            </label>
-            <input
-              placeholder="Insira seu nome"
-              style={{
-                padding: "10px 10px",
-                borderRadius: "6px",
-                marginBottom: "10px",
-              }}
-            />
-            <label
-              style={{
-                fontSize: "20px",
-                lineHeight: "28px",
-                fontWeight: "bold",
-
-                marginBottom: "5px",
-              }}
-            >
-              E-mail*
-            </label>
-            <input
-              style={{
-                padding: "10px 10px",
-                borderRadius: "6px",
-                marginBottom: "10px",
-              }}
-              placeholder="Insira seu email"
-            />
-            <label
-              style={{
-                fontSize: "20px",
-                lineHeight: "28px",
-                fontWeight: "bold",
-
-                marginBottom: "5px",
-              }}
-            >
-              O que não pode faltar no seu app de estudos*
-            </label>
-            <input
-              style={{
-                padding: "10px 10px",
-                borderRadius: "6px",
-                marginBottom: "10px",
-              }}
-              placeholder="Nos dê sua opinião..."
-            />
-            <p style={{ marginBottom: "20px" }}>
-              Lorem ipsum dolor sit amet consectetur. Feugiat lorem mauris nibh
-              amet malesuada massa cursus amet mattis. Aliquet scelerisque
-              dignissim ut diam tristique vitae ullamcorper. Pharetra lacus at
-              enim dolor enim lectus. Cursus placerat lectus netus vitae et cras
-              tortor. Adipiscing mattis volutpat massa sed. Nulla nunc justo
-              mattis facilisis eget et eget nunc augue. Venenatis orci pharetra
-              nec odio. At sit ridiculus.
-            </p>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <input type="checkbox" style={{ width: "20px" }} />
-              <span style={{ fontSize: "20px", marginLeft: "7px" }}>
-                Aceito os Termos e Condições
-              </span>
-            </div>
-          </form>
-        </div>
+            Enviar formulário
+          </button>
+        </form>
       </div>
     </main>
   );

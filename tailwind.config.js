@@ -8,10 +8,18 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        backgroundGradient: "linear-gradient(90deg, #154BAE 0%, #69B24B 100%)"
       },
+        keyframes:{
+        fadeIn :{
+            "0%":{ opacity: 0 },
+            "100%":{ opacity: 1}
+          }
+        },
+        animation:{
+          fadeIn:"fadeIn 300ms ease-in-out"
+        }
+      
     },
   },
   plugins: [],
