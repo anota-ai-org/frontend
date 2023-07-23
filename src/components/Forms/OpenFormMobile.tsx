@@ -12,7 +12,7 @@ export function OpenFormMobile() {
       <Dialog.Portal>
         <Dialog.Overlay className="bg-gray-100 absolute inset-0" />
         <Dialog.Content className="inline-flex w-full h-full inset-0 fixed ">
-          <div className="bg-gray-50 m-auto flex flex-col items-center animate-contentShow">
+          <div className="bg-gray-100 m-auto flex flex-col items-center animate-contentShow">
             <Form />
 
             <Dialog.Close asChild>
