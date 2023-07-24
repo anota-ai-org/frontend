@@ -10,14 +10,14 @@ export function OpenFormMobile() {
         </button>
       </Dialog.Trigger>
       <Dialog.Portal>
-        <Dialog.Overlay className="bg-gray-100 absolute inset-0" />
-        <Dialog.Content className="inline-flex w-full h-full inset-0 fixed ">
-          <div className="bg-gray-100 m-auto flex flex-col items-center animate-contentShow">
+        <Dialog.Overlay className="bg-backgroundGradient fixed inset-0" />
+        <Dialog.Content className="flex justify-center items-center p-2 w-full h-full inset-0 absolute ">
+          <div className="bg-gray-100 h-full rounded-lg flex flex-col items-center animate-contentShow">
             <Form />
 
             <Dialog.Close asChild>
               <button className="bg-backgroundGradient p-2 rounded-md text-white font-bold">
-                Fechar
+                Voltar
               </button>
             </Dialog.Close>
           </div>
