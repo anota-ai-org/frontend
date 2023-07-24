@@ -1,10 +1,14 @@
 import { Modal } from "../Modal";
 
-export function Form() {
+interface FormProps{
+  className?:string
+}
+
+export function Form({className}:FormProps) {
     return (
       <form
         action="submit"
-        className="bg-gray-100 p-4 max-w-md flex flex-col items-center rounded-md gap-3 animate-[fadeIn_300ms_ease-in-out]"
+        className={`bg-gray-100 p-4 ${className} max-w-md flex flex-col items-center rounded-md gap-3 animate-[fadeIn_300ms_ease-in-out]`}
       >
         <h4 className="text-2xl font-bold">CADASTRO</h4>
         <div className="w-full flex flex-col gap-3 mt-3">

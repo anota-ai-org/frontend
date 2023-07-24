@@ -11,9 +11,9 @@ export function OpenFormMobile() {
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="bg-backgroundGradient fixed inset-0" />
-        <Dialog.Content className="flex justify-center items-center p-2 w-full h-full inset-0 absolute ">
-          <div className="bg-gray-100 h-full rounded-lg flex flex-col items-center animate-contentShow">
-            <Form />
+        <Dialog.Content className="flex h-full p-2 justify-center items-center w-full  inset-0 absolute ">
+          <div className="bg-gray-100 py-4 rounded-lg flex flex-col items-center animate-contentShow">
+            <Form className="h-full"/>
 
             <Dialog.Close asChild>
               <button className="bg-backgroundGradient p-2 rounded-md text-white font-bold">
