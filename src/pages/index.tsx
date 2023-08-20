@@ -9,6 +9,7 @@ import { Underscore } from "@/components/Underscore";
 import { Form } from "@/components/Forms/Form";
 import { OpenFormMobile } from "@/components/Forms/OpenFormMobile";
 import { useState } from "react";
+import { ABoutModal } from "@/components/AboutModal";
 
 export default function Home() {
   const [copybook,setCopybook] = useState(false);
@@ -38,14 +39,14 @@ export default function Home() {
           mais dor de cabeça! Não se preocupe, AnotAí!
         </p>
         <div
-          className={`inline-flex relative justify-center mt-6 ${
+          className={`hidden md:inline-flex relative justify-center mt-6 ${
             copybook ? "md:w-full " : "animate-pulse"
           }`}
         >
           <Image
             priority={true}
             fetchPriority="high"
-            className={`p-0 animate-[fadeIn_400ms_ease-in-out] w-16  h-96 ${
+            className={`p-0 animate-[fadeIn_400ms_ease-in-out] w-14  h-96 ${
               copybook
                 ? "animate-[pulse_400ms_ease-in] md:absolute  p-0  right-0"
                 : ""
@@ -61,7 +62,7 @@ export default function Home() {
             }
           >
             {copybook ? (
-              <p className="max-w-xl mt-4 ml-56 leading-9 text-left">
+              <div className="max-w-xl mt-4 ml-56 leading-9 text-left">
                 <Underscore
                   lineBold="sm"
                   fullLine={true}
@@ -118,7 +119,7 @@ export default function Home() {
                     </Underscore>
                   </li>
                 </ul>
-              </p>
+              </div>
             ) : (
               ""
             )}
@@ -127,14 +128,14 @@ export default function Home() {
             onClick={() => (copybook ? setCopybook(false) : setCopybook(true))}
             priority={true}
             fetchPriority="high"
-            className={` hover:cursor-pointer md:animate-[fadeIn_400ms_ease-in-out] p-0 w-80 h-96 ${
+            className={` hover:cursor-pointer md:animate-[fadeIn_400ms_ease-in-out] p-0 w-64 h-96 ${
               copybook ? "md:animate-[pulse_450ms_ease-in] absolute left-0" : ""
             }`}
             alt="Livro de anotações"
             src={book}
           />
         </div>
-
+        <ABoutModal/>
         <OpenFormMobile />
       </div>
 

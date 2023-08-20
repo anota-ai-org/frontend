@@ -64,7 +64,7 @@ export function Form() {
     <form
       onSubmit={handleSubmit(handleData)}
       action="submit"
-      className="bg-gray-100 p-4 max-w-md flex flex-col items-center rounded-md gap-3 animate-[fadeIn_300ms_ease-in-out]"
+      className="rad bg-gray-100 p-4 max-w-md flex flex-col items-center rounded-md gap-3 animate-[fadeIn_300ms_ease-in-out]"
     >
       <h4 className="text-2xl font-bold">CADASTRO</h4>
       <div className="w-full flex flex-col gap-3 mt-3">
