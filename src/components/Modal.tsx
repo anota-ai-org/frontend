@@ -67,10 +67,10 @@ export function Modal() {
               5.1. A Empresa não se responsabiliza por danos diretos, indiretos,
               incidentais, consequenciais, especiais ou punitivos decorrentes do
               uso ou incapacidade de uso da Plataforma.
-              <strong>6. Modificações e Suspensão</strong>
+              <br/><strong>6. Modificações e Suspensão</strong>
               <br />A Empresa se reserva o direito de modificar, suspender ou
               encerrar a Plataforma a qualquer momento, sem aviso prévio.
-              <strong>7. Disposições Gerais</strong>
+              <br/><strong>7. Disposições Gerais</strong>
               <br />
               7.1. Estes Termos constituem o acordo completo entre você e a
               Empresa em relação ao uso da Plataforma. Ao usar a Plataforma,

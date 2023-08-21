@@ -2,10 +2,10 @@ import Image from 'next/image'
 import bgThanks from '../../assets/bg-thanks.png'
 export default function Thanks() {
     return (
-      <div className="relarive">
-        <div className=" bg-backgroundGradient h-full w-full opacity-80 flex flex-col justify-center items-center z-10 absolute">
+      <div className="relative">
+        <div className=" bg-backgroundGradient h-full w-full opacity-80 flex flex-col justify-center items-center p-4 z-10 fixed inset-0">
           <h1 className="text-4xl font-bold text-white">Muito obrigado!</h1>
-          <p className='max-w-2xl text-3xl rounded-3xl mt-20 text-center  bg-black bg-opacity-100 leading-10 text-white p-4'>
+          <p className='max-w-2xl md:text-3xl rounded-3xl mt-20 text-center  bg-black bg-opacity-100 leading-10 text-white p-4'>
             Agradecemos muito pelo seu interesse em nosso aplicativo! Seu
             interesse e sua opinião sobre o que esperar de uma nova ferramenta
             digital para auxiliar em suas anotações é muito importante para
