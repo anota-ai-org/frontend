@@ -48,7 +48,7 @@ export default function Home() {
             fetchPriority="high"
             className={`p-0 animate-[fadeIn_400ms_ease-in-out] w-14  h-96 ${
               copybook
-                ? "animate-[pulse_400ms_ease-in] md:absolute  p-0  right-0"
+                ? " md:absolute  p-0  right-0"
                 : ""
             }`}
             alt="Caneta"
@@ -129,7 +129,7 @@ export default function Home() {
             priority={true}
             fetchPriority="high"
             className={` hover:cursor-pointer md:animate-[fadeIn_400ms_ease-in-out] p-0 w-64 h-96 ${
-              copybook ? "md:animate-[pulse_450ms_ease-in] absolute left-0" : ""
+              copybook ? " absolute left-0" : ""
             }`}
             alt="Livro de anotações"
             src={book}

@@ -5,8 +5,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { FormError } from "./FormError";
 import { api } from "@/api/axios";
 import { AxiosError } from "axios";
+import { useRouter } from "next/router";
+
 
 export function Form() {
+const {push} = useRouter();
   const formSchema = z.object({
     name: z
       .string()
@@ -52,6 +55,7 @@ export function Form() {
         });
       
       reset()
+      push("/thanks")
     } catch (err) {
       if (err instanceof AxiosError && err?.response?.data?.message) {
         alert(err.response.data.message);
