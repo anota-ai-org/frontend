@@ -46,7 +46,7 @@ export default function Home() {
           <Image
             priority={true}
             fetchPriority="high"
-            className={`p-0 animate-[fadeIn_400ms_ease-in-out] w-14  h-96 ${
+            className={`p-0 animate-[fadeIn_400ms_ease-in-out] w-14  h-80 ${
               copybook
                 ? " md:absolute  p-0  right-0"
                 : ""
@@ -57,7 +57,7 @@ export default function Home() {
           <div
             className={
               copybook
-                ? "flex w-11/12 mt-10 m-auto animate-fadeIn h-72 items-cent bg-sheetCopybook"
+                ? "flex w-11/12 m-auto animate-fadeIn mt-1 h-72 items-cent bg-sheetCopybook"
                 : ""
             }
           >
@@ -128,7 +128,7 @@ export default function Home() {
             onClick={() => (copybook ? setCopybook(false) : setCopybook(true))}
             priority={true}
             fetchPriority="high"
-            className={` hover:cursor-pointer md:animate-[fadeIn_400ms_ease-in-out] p-0 w-64 h-96 ${
+            className={` hover:cursor-pointer md:animate-[fadeIn_400ms_ease-in-out] p-0 w-56 h-80 ${
               copybook ? " absolute left-0" : ""
             }`}
             alt="Livro de anotações"
