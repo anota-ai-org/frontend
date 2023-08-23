@@ -19,11 +19,7 @@ const {push} = useRouter();
       }),
     email: z.string().email({ message: "Email inválido" }),
     opinion: z
-      .string()
-      .min(3, { message: "Esse campo deve ter pelo menos 3 caracteres" })
-      .refine((name) => name.trim().length > 0, {
-        message: "Esse campo deve ter pelo menos 3 caracteres",
-      }),
+      .string().nullable(),
     checkTermsAndConditions: z.boolean().refine((check) => check, {
       message: "É necessário aceitar os termos e condições para continuar",
     }),
@@ -101,7 +97,7 @@ const {push} = useRouter();
           <strong>O que não pode faltar no seu app de estudos?</strong>
           <textarea
             {...register("opinion")}
-            placeholder="Nos de sua opinião"
+            placeholder="Nos dê sua opinião"
             className={`p-2 rounded-md resize-none h-36 ${
               errors.opinion?.message
                 ? "border-red-600 border-2 border-solid"
