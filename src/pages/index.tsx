@@ -107,7 +107,7 @@ export default function Home() {
                       bgTailwind="bg-red-600"
                     >
                       Salva o seu progresso em suas anotações e permite a edição
-                      de suas anotações da
+                      de suas 
                     </Underscore>
 
                     <Underscore
@@ -115,7 +115,7 @@ export default function Home() {
                       fullLine={true}
                       bgTailwind="bg-red-600"
                     >
-                      forma que preferir.
+                      anotações da forma que preferir.
                     </Underscore>
                   </li>
                 </ul>
