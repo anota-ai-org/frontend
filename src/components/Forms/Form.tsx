@@ -43,13 +43,13 @@ const {push} = useRouter();
     opinion,
   }: formType) {
     try {
-      
+
         await api.post("/addRow", {
           name: name,
           email: email,
           message: opinion,
         });
-      
+
       reset()
       push("/thanks")
     } catch (err) {
