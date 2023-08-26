@@ -1,11 +1,9 @@
-"use client";
-
 import Image from "next/image";
 import UserIcon from "../../assets/icons/user.svg";
 import LockIcon from "../../assets/icons/lock.svg";
 import { SetStateAction, useState } from "react";
 
-export default function LoginForm() {
+export default function SignupForm() {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
 
@@ -34,7 +32,9 @@ export default function LoginForm() {
           fetchPriority="high"
           width={21}
           height={21}
-          className={`absolute left-3 md:w-[26px] md:h-[26px] ${user ? "brightness-0" : ""}`}
+          className={`absolute left-3 md:w-[26px] md:h-[26px] ${
+            user ? "brightness-0" : ""
+          }`}
         />
         <input
           type="text"
@@ -53,7 +53,9 @@ export default function LoginForm() {
           fetchPriority="high"
           width={15}
           height={21}
-          className={`absolute left-3 md:w-[20px] md:h-[26px] ${password ? "brightness-0" : ""} `}
+          className={`absolute left-3 md:w-[20px] md:h-[26px] ${
+            password ? "brightness-0" : ""
+          } `}
         />
         <input
           type="password"
@@ -62,6 +64,12 @@ export default function LoginForm() {
           onChange={handlePassword}
         />
       </div>
+
+      <p className="font-roboto text-base text-black text-center max-w-[30ch] my-6">
+        Uma senha forte tem pelo menos 8 caracteres e inclui letras maiúsculas e
+        minúsculas, números e símbolos.
+      </p>
+
       <button
         type="submit"
         disabled={!handleDisable}
