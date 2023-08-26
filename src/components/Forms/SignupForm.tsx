@@ -21,7 +21,7 @@ export default function SignupForm() {
     <form
       action=""
       method=""
-      className="w-full flex flex-col items-center justify-center px-2 font-inter gap-4"
+      className="w-full flex flex-col items-center justify-center px-2 font-inter gap-2 portrait:gap-4 md:gap-4 m-4"
     >
       <div className="w-full h-9 md:h-12 relative flex items-center justify-center max-w-[410px]">
         <Image
@@ -65,7 +65,7 @@ export default function SignupForm() {
         />
       </div>
 
-      <p className="font-roboto text-base text-black text-center max-w-[30ch] my-6">
+      <p className="font-roboto text-sm portrait:text-base md:text-base text-black text-center max-w-[30ch] portrait:my-6 md:my-6">
         Uma senha forte tem pelo menos 8 caracteres e inclui letras maiúsculas e
         minúsculas, números e símbolos.
       </p>
