@@ -18,7 +18,7 @@ export default function Signup() {
           fetchPriority="high"
           width={305}
           height={100}
-          className="md:max-w-[355] md:max-h-[162] drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] portrait:mb-5 md:mb-8"
+          className="md:max-w-[325] md:max-h-[122] lg:max-w-[355] lg:max-h-[162] drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] lg:mb-3"
         />
 
         <SignupForm />
