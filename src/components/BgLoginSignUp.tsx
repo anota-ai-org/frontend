@@ -15,7 +15,7 @@ export default function BgLoginSignUp({children} : BgLoginSignUpProps) {
         priority={true}
         quality={100}
         fetchPriority="high"
-        className="absolute -z-20 left-0 top-0 w-[50%] h-full mix-blend-luminosity bg-lightgray-[50%] object-cover"
+        className="absolute -z-20 left-0 top-0 w-100% md:w-[50%] h-full mix-blend-luminosity bg-lightgray-[50%] object-cover"
       />
       <div className="absolute -z-10 w-full h-full bg-backgroundGradientLogin"></div>
       {children}
