@@ -12,10 +12,12 @@ module.exports = {
         backgroundGradient: "linear-gradient(90deg, #154BAE 0%, #69B24B 100%)",
         backgroundGradientLogin:
           "linear-gradient(270deg, #0055AD 0%, #22B343 47.30%, rgba(34, 179, 67, 0.00) 100%)",
+        backgroundGradientPerfil: "linear-gradient(225deg, rgba(0, 85, 173, 0.75) 0.99%, rgba(34, 179, 67, 0.75) 100%)",
       },
       backgroundColor: {
         sheetCopybook: "#EDCC77",
         whiteOpacity: "rgba(255, 255, 255, 0.60)",
+        buttonPerfil: "rgba(0, 85, 173, 0.75)"
       },
       height: {
         smallHeight: "1px",
