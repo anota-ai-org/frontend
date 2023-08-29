@@ -8,7 +8,7 @@ type BgLoginSignUpProps = {
 
 export default function BgLoginSignUp({children} : BgLoginSignUpProps) {
   return (
-    <main className='min-w-full w-full min-h-screen h-full relative flex items-center justify-center py-5 px-5'>
+    <main className='min-w-full w-auto min-h-screen h-auto relative flex items-center justify-center py-5 px-5'>
       <Image
         src={bgLogin}
         alt="biblioteca"
