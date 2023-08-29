@@ -7,9 +7,8 @@ import { api } from "@/api/axios";
 import { AxiosError } from "axios";
 import { useRouter } from "next/router";
 
-
 export function Form() {
-const {push} = useRouter();
+  const { push } = useRouter();
   const formSchema = z.object({
     name: z
       .string()
@@ -18,8 +17,7 @@ const {push} = useRouter();
         message: "O nome deve ter pelo menos 3 caracteres",
       }),
     email: z.string().email({ message: "Email inválido" }),
-    opinion: z
-      .string().nullable(),
+    opinion: z.string().nullable(),
     checkTermsAndConditions: z.boolean().refine((check) => check, {
       message: "É necessário aceitar os termos e condições para continuar",
     }),
@@ -43,15 +41,14 @@ const {push} = useRouter();
     opinion,
   }: formType) {
     try {
-      
-        await api.post("/addRow", {
-          name: name,
-          email: email,
-          message: opinion,
-        });
-      
-      reset()
-      push("/thanks")
+      await api.post("/addRow", {
+        name: name,
+        email: email,
+        message: opinion,
+      });
+
+      reset();
+      push("/thanks");
     } catch (err) {
       if (err instanceof AxiosError && err?.response?.data?.message) {
         alert(err.response.data.message);
@@ -136,7 +133,8 @@ const {push} = useRouter();
         disabled={isSubmitting}
         type="submit"
         className={` hover:scale-105 transition-transform p-2 rounded-md font-bold text-white ${
-          isSubmitting ? "bg-gray-300" : "bg-backgroundGradient"}`}
+          isSubmitting ? "bg-gray-300" : "bg-backgroundGradient"
+        }`}
       >
         Enviar formulário
       </button>
