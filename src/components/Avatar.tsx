@@ -25,7 +25,7 @@ export default function Avatar() {
     <div className="w-full h-full flex items-center justify-center mb-14">
       <label
         onClick={handleImageClick}
-        className="max-w-[130px] max-h-[130px] w-[90px] h-[90px] md:w-[130px] md:h-[130px] flex items-center justify-center rounded-full bg-white p-1 shadow-defaultShadow relative"
+        className="max-w-[130px] max-h-[130px] w-[90px] h-[90px] md:w-[130px] md:h-[130px] flex items-center justify-center rounded-full bg-white p-1 shadow-defaultShadow relative cursor-pointer"
       >
         <input
           type="file"
@@ -72,7 +72,7 @@ export default function Avatar() {
             />
           </div>
           <p
-            className="absolute w-[20ch] -bottom-[120%] left-[120%] text-[10px] md:text-sm text-black"
+            className="absolute w-[20ch] -bottom-[120%] left-[120%] text-[10px] md:text-sm text-black pointer-events-none"
           >
             O arquivo deve ser em formato JPG ou PNG, com resolução máxima de
             500x500.
